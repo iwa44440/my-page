@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+@media(min-width:900px){
+  .pc{
+    display: grid;
+  }
+  html ,body,main{
+    height: 20px;
+  }
+  body{
+    width: 100%;
+    background: linear-gradient(to right,rgb(38, 190, 228),rgb(235, 208, 208),rgb(106, 96, 246));
+    
+    
+  }
+  .sp{
+    display: none;
+  }
+  header{
+    background: none;
+  }
+  .title{
+    text-align: center;
+  }
+  h1{
+    margin: 0;
+    padding: 0;
+    font-size: 64px;
+  }
+  .title img{
+    z-index: -2;
+    width: 200px;
+    border: darkmagenta double 4px;
+  }
+  /* 選択 */
+  .choice{
+    background-color: rgb(88, 74, 165);
+    
+    border-radius: 50%;
+    opacity: 0.5;
+    box-shadow: 0px 0px 15px 0px white;
+    position: absolute;
+  }
+  .choice h2{
+    color: rgb(244, 250, 255);
+  }
+  .c1{
+    top: 5%;
+    left: 5%;
+    height: 250px;
+    width: 250px;
+  }
+  .c2{
+    top: 50%;
+    left: 20%;
+    height: 250px;
+    width: 250px;
+    aspect-ratio: 1/1;
+  }
+  .c3{
+    height: 250px;
+    width: 250px;
+    top:5%;
+    right:5%;
+    aspect-ratio: 1/1;
+
+  }
+  .c4{
+    top: 50%;
+    right: 20%;
+    height: 250px;
+    width: 250px;
+    aspect-ratio: 1/1;
+  }
+  
+
+}
