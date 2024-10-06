@@ -263,14 +263,18 @@ a{
   padding-top: 48px;
 
 }
+.w-site{
+  overflow-y: scroll;
+}
 .wark{
   border:double 8px rgb(49, 3, 49);
   width: 50%;
   height: auto;
   aspect-ratio: 1/1;
   margin:48px auto;
-  overflow-y: scroll;
-
+}
+.w-logo{
+  object-fit: cover;
 }
 .wark img{
   width: 100%;
@@ -329,9 +333,31 @@ a{
 .sl1{
   background:blue;
   max-width: 90%;
-
 }
-
+.sl2{
+  background:blue;
+  max-width: 90%;
+}
+.sl3{
+  background:blue;
+  max-width: 60%;
+}
+.sl4{
+  background:blue;
+  max-width: 90%;
+}
+.sl5{
+  background:blue;
+  max-width: 95%;
+}
+.sl6{
+  background:blue;
+  max-width: 75%;
+}
+.sl7{
+  background:blue;
+  max-width: 60%;
+}
 
 /* 上に */
 header.scrolled {

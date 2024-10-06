@@ -38,9 +38,20 @@
   const scrollObserver = new IntersectionObserver(scrollCallback);
   scrollObserver.observe(document.getElementById('target-2'));
 }
-// カルーセル
-{
-  
-}
+//PCモータルウインドウ
+$(function(){
+  $('.js-modal-open').each(function(){
+      $(this).on('click',function(){
+          var tag = $(this).data('tag');
+          var modal = document.getElementById(tag);
+          $(modal).fadeIn();
+          return false;
+      });
+  });
+  $('.js-modal-close').on('click',function(){
+      $('.js-modal').fadeOut();
+      return false;
+  }); 
+});
 
 //preventDefaultはデフォルト動作を防ぐ
