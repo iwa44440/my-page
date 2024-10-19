@@ -90,27 +90,110 @@
   }
 
   /* クリックで開く */
- 
-  .modal{
-      display: none;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      width: 100%;
+
+  #mask {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
   }
-  .modal__bg{
-      background: rgba(0,0,0,0.8);
-      height: 100vh;
-      position: absolute;
-      width: 100%;
+  #mo1,#mo2,#mo3,#mo4 {
+    background: #babaa9;
+    width: 50%;
+    height: 70%;
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: transform 0.5s;
+    z-index: 2;
+  overflow-y: scroll;
   }
-  .modal__content{
-      background: #fff;
-      left: 50%;
-      padding: 40px;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      width: 60%;
+
+  
+  .modalpc {
+    color: rebeccapurple;
+    text-align: center;
   }
+  .modalpc > div{
+    display: block;
+    margin: 48px auto;
+  }
+  
+  #mask.hidden {
+    display: none;
+  }
+  
+  #mo1.hidden,#mo2.hidden,#mo3.hidden,#mo4.hidden {
+    transform: translate(0, -10000px);
+  }
+  .mo-cl{
+    text-align: center;
+  }
+  .mo-cl > button{ 
+    cursor: pointer;
+    color: rebeccapurple;
+    background: #babaa9;
+    width: 108px;
+    height: 32px;
+    border-radius: 16px;
+    border:  double purple;
+  }
+  .mo-cl > button:hover{ 
+    background: #808072;
+  }
+  .pw-site{
+    overflow-y: scroll;
+  }
+  /* Likes */
+  /* .l-cpntainer .square{
+    animation: l-rotate 10s infinite linear;
+  }
+  @keyframes l-rotate{
+    0% {
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  } */
+  .psl{
+    background-color: black;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* 後で消す */
+    margin: 60px;
+  }
+  .psl > img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    opacity:0.5;
+  }
+  .psl:hover{
+    width: 240px;
+    height: 240px;
+  }
+
+  /* パフォーマンス　設定 */
+  .p-wark{
+    border:double 8px rgb(49, 3, 49);
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .pw-logo{
+    object-fit: cover;
+  }
+  .p-wark img{
+    width: 100%;
+  }
+  
 }
