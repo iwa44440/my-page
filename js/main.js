@@ -39,19 +39,92 @@
   scrollObserver.observe(document.getElementById('target-2'));
 }
 //PCモータルウインドウ
-$(function(){
-  $('.js-modal-open').each(function(){
-      $(this).on('click',function(){
-          var tag = $(this).data('tag');
-          var modal = document.getElementById(tag);
-          $(modal).fadeIn();
-          return false;
-      });
-  });
-  $('.js-modal-close').on('click',function(){
-      $('.js-modal').fadeOut();
-      return false;
-  }); 
-});
+{
+  const op1 = document.getElementById('op1');
+  const cl1 = document.getElementById('cl1');
+  const mo1 = document.getElementById('mo1');
+  const mask = document.getElementById('mask');
 
+  op1.addEventListener('click', () => {
+    mo1.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+
+  cl1.addEventListener('click', () => {
+    mo1.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+
+  mask.addEventListener('click', () => {
+    // modal.classList.add('hidden');
+    // mask.classList.add('hidden');
+    cl1.click();
+  });
+}
+{
+  const op2 = document.getElementById('op2');
+  const cl2 = document.getElementById('cl2');
+  const mo2 = document.getElementById('mo2');
+  const mask = document.getElementById('mask');
+
+  op2.addEventListener('click', () => {
+    mo2.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+
+  cl2.addEventListener('click', () => {
+    mo2.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+
+  mask.addEventListener('click', () => {
+    // modal.classList.add('hidden');
+    // mask.classList.add('hidden');
+    cl2.click();
+  });
+}
+{
+  const op3 = document.getElementById('op3');
+  const cl3 = document.getElementById('cl3');
+  const mo3 = document.getElementById('mo3');
+  const mask = document.getElementById('mask');
+
+  op3.addEventListener('click', () => {
+    mo3.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+
+  cl3.addEventListener('click', () => {
+    mo3.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+
+  mask.addEventListener('click', () => {
+    // modal.classList.add('hidden');
+    // mask.classList.add('hidden');
+    cl3.click();
+  });
+}
+{
+  const op4 = document.getElementById('op4');
+  const cl4 = document.getElementById('cl4');
+  const mo4 = document.getElementById('mo4');
+  const mask = document.getElementById('mask');
+
+  op4.addEventListener('click', () => {
+    mo4.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+
+  cl4.addEventListener('click', () => {
+    mo4.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+
+  mask.addEventListener('click', () => {
+    // modal.classList.add('hidden');
+    // mask.classList.add('hidden');
+    cl4.click();
+  });
+}
 //preventDefaultはデフォルト動作を防ぐ
