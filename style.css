@@ -152,16 +152,33 @@ header h1{
   background-size: cover;
   background-attachment: fixed;
 }
+.first > hr{
+  margin: 0 auto;
+  color: #fff;
+}
 .m-p{
-  margin: 80px 0;
+  margin:0;
+  height: 400px;
   text-align: center;
+  background-image: url(自分1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .m-p-p{
-  font-size:24px;
+  padding: 4px;
+  font-size:32px;
   text-shadow: 1px 1px 0 aliceblue;
+  background: linear-gradient(to right,rgb(31, 0, 34),rgb(8, 1, 102));
+
 }
 .hanten{
   transform: scaleY(-0.5);
+}
+.space{
+  height: 320px;
 }
 
 /* 自己紹介 */
@@ -192,8 +209,7 @@ header h1{
   position: relative;
   height: 420px;
   text-align: center;
-  
-  
+  margin-bottom: 64px;
 }
 .css-carousel-slider4 img {
   width: 70%;
@@ -273,8 +289,14 @@ a{
   aspect-ratio: 1/1;
   margin:48px auto;
 }
-.w-logo{
-  object-fit: cover;
+
+.logo1{
+  background-size: cover;
+  background-image:url(walker.png) ;
+}
+.logo2{
+  background-size: cover;
+  background-image: url(ぱんであ.png);
 }
 .wark img{
   width: 100%;
