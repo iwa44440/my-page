@@ -41,6 +41,7 @@
     opacity: 0.5;
     box-shadow: 0px 0px 15px 0px white;
     position: absolute;
+    transition: 1.5s;
   }
   .choice h2{
     margin-top: 40%;
@@ -80,6 +81,7 @@
   .choice:hover{
     animation:changecolor 3s infinite;
     border: double purple 2px;
+
   }
   @keyframes changecolor{
     0%{background-color: aquamarine;}
@@ -87,6 +89,7 @@
     50%{background-color: rgb(0, 211, 141);}
     75%{background-color: rgb(194, 207, 203);}
     100%{background-color: aquamarine;}
+
   }
 
   /* クリックで開く */
