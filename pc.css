@@ -118,7 +118,24 @@
     z-index: 2;
   overflow-y: scroll;
   }
+  /* #mo1{
+    background-color: azure;
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
 
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: transform 0.5s;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
   
   .modalpc {
     color: rebeccapurple;
@@ -166,23 +183,23 @@
       transform: rotate(360deg);
     }
   } */
-  .psl{
+  /* .psl{
     background-color: black;
     width: 160px;
     height: 160px;
     border-radius: 50%;
     /* 後で消す */
     margin: 60px;
-  }
-  .psl > img{
+  } */
+  /* .psl > img{
     width: 160px;
     height: 160px;
     border-radius: 50%;
     opacity:0.5;
     object-fit: cover;
     
-  }
-  .psl:hover{
+  } */
+  /* .psl:hover{
 
     /* width: 240px;
     height: 240px; */
@@ -192,13 +209,45 @@
       height: 240px; */
     }
     animation:sizeup 0.3s forwards;
+  } */
+  .rerere{
+    width: 96%;
+    height: auto;
+    aspect-ratio: 1/.3;
+    background: #808072;
+    display: flex;
+    flex-direction: column;
+  }
+  .rere{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: aquamarine;
+    margin: 16px auto;
+    > div{
+      width: 46%;
+      margin: 2%;
+      height: auto;
+      aspect-ratio: 1/1;
+      background: black;
+    }
+  }
+  .rev{
+    flex-direction: row;
+  }
+  .repic{
+    width: 46%;
+    margin: 2%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 20%;
   }
   @keyframes sizeup{
     to{
       transform: scale(1.5);
     }
   }
-  .circle {
+  /* .circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,15 +265,27 @@
       font: 700 50px / 1 Impact;
       translate: var(--x) var(--y);
     }
-  }
+  } */
 
   /* パフォーマンス　設定 */
+  /* #mo2{
+    display: flex;
+    flex-direction: column;
+  } */
   .p-wark{
-    border:double 8px rgb(49, 3, 49);
+    display: block;
+    border:double 8px rgb(113, 54, 113);
     width: 50%;
     height: auto;
     aspect-ratio: 1/1;
+    background: black;
+    opacity: ;
+  }
   
+  .p-wark-text{
+    font-weight: 900;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: .1px;
   }
   .pw-logo{
     object-fit: cover;
