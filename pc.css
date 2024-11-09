@@ -9,7 +9,7 @@
   }
   body{
     width: 100%;
-    background: linear-gradient(to right,rgb(38, 190, 228),rgb(235, 208, 208),rgb(20, 10, 150));
+    background: linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150));
     /* animation:changecolor 3s infinite; */
     
     
@@ -35,8 +35,8 @@
   }
   /* 選択 */
   .choice{
-    background-color: rgb(88, 74, 165);
-    
+    /* background-color: rgb(88, 74, 165); */
+    backdrop-filter: blur(50px);
     border-radius: 50%;
     opacity: 0.5;
     box-shadow: 0px 0px 15px 0px white;
@@ -80,15 +80,14 @@
   }
   .choice:hover{
     animation:changecolor 3s infinite;
-    border: double purple 2px;
 
   }
   @keyframes changecolor{
-    0%{background-color: aquamarine;}
-    25%{background-color: rgb(47, 207, 154);}
-    50%{background-color: rgb(0, 211, 141);}
-    75%{background-color: rgb(194, 207, 203);}
-    100%{background-color: aquamarine;}
+    0%{background-color: rgba(65, 237, 243, 0.702);}
+    25%{background-color: rgb(47, 207, 154 ,.7);}
+    50%{background-color: rgb(0, 211, 141, .6);}
+    75%{background-color: rgb(194, 207, 203 ,.8);}
+    100%{background-color: rgba(65, 237, 243, 0.7);}
 
   }
 
@@ -106,36 +105,21 @@
   #mo1,#mo2,#mo3,#mo4 {
     background: #babaa9;
     width: 50%;
-    height: 70%;
+    height: 80%;
     padding: 20px;
     border-radius: 8px;
     position: absolute;
-    top: 40px;
+    top: 5%;
     left: 0;
     right: 0;
     margin: 0 auto;
     transition: transform 0.5s;
     z-index: 2;
-  overflow-y: scroll;
+    overflow-y: scroll;
+    background-image: url(71885_0.jpg);
+    background-attachment: fixed;
+    background-position: center;
   }
-  /* #mo1{
-    background-color: azure;
-    width: 40%;
-    height: auto;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transition: transform 0.5s;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  } */
   
   .modalpc {
     color: rebeccapurple;
@@ -155,82 +139,51 @@
   }
   .mo-cl{
     text-align: center;
+    width: 50%;
+    height: 64px;
+    margin: 8px auto;
+    padding: 0;
   }
   .mo-cl > button{ 
     cursor: pointer;
     color: rebeccapurple;
-    background: #babaa9;
-    width: 108px;
-    height: 32px;
+    background: #fafaef5b;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
     border-radius: 16px;
     border:  double purple;
+    display: block;
   }
   .mo-cl > button:hover{ 
-    background: #808072;
+    background: #8080724c;
   }
   .pw-site{
     overflow-y: scroll;
   }
   /* Likes */
-  /* .l-cpntainer .square{
-    animation: l-rotate 10s infinite linear;
-  }
-  @keyframes l-rotate{
-    0% {
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
-  } */
-  /* .psl{
-    background-color: black;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    /* 後で消す */
-    margin: 60px;
-  } */
-  /* .psl > img{
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    opacity:0.5;
-    object-fit: cover;
-    
-  } */
-  /* .psl:hover{
-
-    /* width: 240px;
-    height: 240px; */
-    > img{
-      opacity: 1;
-      /* width: 240px;
-      height: 240px; */
-    }
-    animation:sizeup 0.3s forwards;
-  } */
-  .rerere{
-    width: 96%;
-    height: auto;
-    aspect-ratio: 1/.3;
-    background: #808072;
-    display: flex;
-    flex-direction: column;
-  }
   .rere{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    background: aquamarine;
-    margin: 16px auto;
-    > div{
-      width: 46%;
-      margin: 2%;
-      height: auto;
-      aspect-ratio: 1/1;
-      background: black;
-    }
+    backdrop-filter: blur(10px);
+    border-radius: 2%;
+
+    margin: 48px auto;
+    opacity: .5;
+    transition: 1s;
+  }
+  .rere:hover{
+    opacity: 1;
+  }
+  .rere > div{
+    width: 46%;
+    margin: 2%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background: rgb(16, 14, 14,.7);
+    color: yellow;
+    
   }
   .rev{
     flex-direction: row;
@@ -279,12 +232,23 @@
     height: auto;
     aspect-ratio: 1/1;
     background: black;
-    opacity: ;
+    margin: 0 auto;
+
   }
-  
-  .p-wark-text{
-    font-weight: 900;
+  #mo2 > h3{
+    font-size: 32px;
     -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 1px;
+  }
+  .p-wark-text{
+    backdrop-filter: blur(30px);
+    width: 50%;
+    margin: auto;
+  }
+  .p-wark-text > p{
+    font-weight: 900;
+    color: rgb(0, 42, 255);
+    -webkit-text-stroke-color: #a915d2;
     -webkit-text-stroke-width: .1px;
   }
   .pw-logo{
@@ -293,13 +257,74 @@
   .p-wark img{
     width: 100%;
   }
-  /* .p-wark-text{
-  } */
-
-  /* #mo2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  } */
   
+  .con-p{
+    width: 100%;
+    height: 64px;
+    margin: 8px auto;
+    padding: 0;
+  }
+  .con-p > a, .con-p > button{
+    background: rgb(0, 0, 0,.7);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    font-size: 40px;
+    display: block;
+    transition: 1.5s;
+
+  }
+  .con-p > button:hover ,.con-p > a:hover{
+    background-color: rgb(77, 76, 62,.6);
+    transition: 1.5s;
+  }
+  #mo3 > h1 {
+    margin: 16px auto;
+  }
+  #mo3{
+    background-image:url(71880_0.jpg);
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  /* skill */
+  .skill-p{
+    display: flex;
+    width: 45%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius:4px;
+    border: ridge 4px rgb(37, 3, 172);
+    opacity: 0.2;
+    transition: 2s;
+    backdrop-filter: blur(10px);
+
+
+  }
+  .skill-p > .score{
+    width: 100%;
+  }
+  
+  .skill-p:hover{
+    opacity: 1;
+    transition: 1s;
+  
+  }
+  
+  .skill-p p{
+    font-size: 12px;
+    color: palegoldenrod;
+    margin: 4px;
+  }
+  .skill-p h3{
+    display: inline;
+  }
+  .skill-p img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin:8px auto;
+    border-radius: 4px;
+    border: solid 1px aqua;
+  }
 }
