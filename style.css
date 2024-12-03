@@ -6,6 +6,8 @@ body{
   background: linear-gradient(to right,rgb(31, 0, 34),rgb(8, 1, 102));
   color: rgb(132, 121, 3);
   font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+
 }
 hr{
   background-color:rgb(92, 2, 41);
@@ -17,7 +19,11 @@ hr{
   max-width: 400px;
   margin: auto;
 }
-
+.sp{
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /* header */
 header {
   display: flex;
@@ -38,7 +44,17 @@ h2{
   margin: 124px 0;
 }
 
+/* 動き */
+.animate {
+  opacity: 0;
+  transition: opacity 1s,transform .5s;
+}
 
+.animate.appear{
+  opacity: 1;
+  transform: none;
+}
+/* 動きここまで */
 
 .sp-menu {
   margin-left: auto;

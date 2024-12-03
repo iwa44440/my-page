@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="pc.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="add">
@@ -63,7 +66,7 @@
     <section class="like sp">
       <hr id="2">
       <h2>私の好きなもの</h2>
-      <div class="css-carousel-slider4">
+      <div class="css-carousel-slider4   animate">
         <div class="slide-wrap-main">
             <div class="slide"><img src="71882_0.jpg" alt=""></div>
         </div>
@@ -81,10 +84,10 @@
     </section>
     <hr id="3" class="sp">
     <!-- 仕事 -->
-    <section class="sp">
+    <section class="sp ">
       <h2>実績</h2>
       <div>
-        <div class="warks">
+        <div class="warks  animate">
         <h3>ホームページ</h3>
           <div class="wark w-site">
             <img src="ケーキサイト.jpeg" alt="">
@@ -163,11 +166,35 @@
         </div>
       </div>
     </section>
+
+
+
+
+
+
     <!-- pc -->
     <section class="pc">
+      <div class="start">
+        <div class="start-pc">
+          <div class="statxt">
+            <p>Thank</p>
+            <p>you</p>
+            <p>for</p>
+            <p>visiting</p>
+            <p>my</p>
+            <p>site</p>
+            <p>!!!</p>
+          </div>
+          
+        </div>        
+      </div>
+      <div class="v-box">
+        <video class="pcbg" src="海空１.mp4" muted autoplay loop></video>
+      </div>
+      
       <div class="title">
         <h1>Yoh's Portfolio</h1>
-        <div><img src="Yoh.png" alt=""></div>
+        <div id="op5"><img src="Yoh.png" alt=""></div>
       </div>
       <div class="choices">
         <div class="choice c1" id="op1" href="">
@@ -184,6 +211,15 @@
         </div>
       </div>
     </section>
+    <!-- 自己紹介 -->
+    <section id="mo5" class=" modalpc pc">
+      <div class="mo5txt">aaa</div>
+      <div class="mo5txt"><p>aaa <br>aaa</p></div>
+      <div class="mo-cl con-p" id="cl5">
+        <button>Close</button>
+      </div>
+    </section>
+    <!-- すきなもの -->
     <section id="mo1" class="hidden modalpc pc">
       <h1>My Favorite Things</h1>
       <div class="rerere">
@@ -267,7 +303,7 @@
       <div class="con-p"><a href="" target="_blank">Facebook</a></div>
       
       <div class="mo-cl con-p" id="cl3">
-        <button>閉じる</button>
+        <button>Close</button>
       </div>
     </section>
     <!-- スキル -->
@@ -337,7 +373,7 @@
       </div>
     </section>
 
-    <div id="mask" class="hidden"></div>
+    <div id="mask"></div>
   </main>
   <footer>
     <!-- コンタクト -->

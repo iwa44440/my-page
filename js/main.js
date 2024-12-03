@@ -38,6 +38,26 @@
   const scrollObserver = new IntersectionObserver(scrollCallback);
   scrollObserver.observe(document.getElementById('target-2'));
 }
+{
+  function callback(entries, obs){
+    entries.forEach(entry => {
+      if(!entry.isIntersecting){
+        return;
+      }
+      entry.target.classList.add("appear");
+      console.log(entry.target);
+      obs.unobserve(entry.target);
+    });
+  }
+  const option ={
+    threshold:0.2,
+  };
+  const observer = new IntersectionObserver(callback, option);
+  const targets = document.querySelectorAll(".animate");
+  targets.forEach(target =>{
+    observer.observe(target);
+  });
+}
 //PCモータルウインドウ
 {
   const op1 = document.getElementById('op1');
@@ -125,6 +145,28 @@
     // modal.classList.add('hidden');
     // mask.classList.add('hidden');
     cl4.click();
+  });
+}
+{
+  const op5 = document.getElementById('op5');
+  const cl5 = document.getElementById('cl5');
+  const mo5 = document.getElementById('mo5');
+  const mask = document.getElementById('mask');
+
+  op5.addEventListener('click', () => {
+    mo5.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+
+  cl5.addEventListener('click', () => {
+    mo5.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+
+  mask.addEventListener('click', () => {
+    // modal.classList.add('hidden');
+    // mask.classList.add('hidden');
+    cl5.click();
   });
 }
 //preventDefaultはデフォルト動作を防ぐ
