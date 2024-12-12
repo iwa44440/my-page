@@ -24,6 +24,8 @@ hr{
   font-weight: 400;
   font-style: normal;
 }
+/* start */
+
 /* header */
 header {
   display: flex;
@@ -38,10 +40,15 @@ header {
 h1{
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 1px;
+  font-size: 6vw;
 }
 h2{
   text-align: center;
   margin: 124px 0;
+  font-size: 5vw;
+}
+h3{
+  font-size: 4vw;
 }
 
 /* 動き */
@@ -161,13 +168,33 @@ header h1{
 
 /* メイン */
 .m-image{
-  height: 560px;
-  width: 99%;
-  border:#663399 inset 2px;
-  background-image: url(71885_0.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  height: auto;
+  width: 100%;
+}
+.spbg{
+  width: 100%;
+}
+
+.spa1{
+  position: relative;
+
+}
+.message{
+  position: absolute;
+  top: 50%;
+  font-size: 8vw;
+  transform: translate(-50%);
+  left: 50%;
+  font-weight: 900;
+  color: #e2e61a;
+  -webkit-text-stroke-color: #b31111;
+  -webkit-text-stroke-width: .5px;
+  animation: poyooon 1.5s linear  infinite ;
+}
+@keyframes poyooon {
+  0%   { transform: translate(-50%, 0%); }
+  60%  { transform: translate(-50%, -50%); }
+  100% { transform: translate(-50%, 0%); }
 }
 .first > hr{
   margin: 0 auto;
@@ -210,13 +237,61 @@ header h1{
   text-align: center;
 }
 .prof-com p{
-  font-size: 12px;
+  font-size: 3vw;
   text-align: center;
 }
 
+/* 名刺本体 */
+
+.card {
+  width: 80%; /* 任意の横幅を指定 */
+  height: auto;
+  aspect-ratio: 8/5;
+  position: relative;
+  cursor: pointer;
+  margin:88px auto;
+  overflow: hidden;
+}
+/* 擬似要素とpadding-topでカードの高さを指定 */
+.card::before {
+  content: "";
+  display: block;
+  padding-top: 142.5%;
+}
+/* カード内の画像 */
+.card img {
+  width: 100%;
+}
+/* カード裏面・表面の共通スタイル */
+.card .back,
+.card .front {
+  transition: all 1s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+/* カード表面のスタイル */
+.card .front {
+  transform: rotateY(-180deg);
+}
+/* ホバー時のカード裏面 */
+.card:hover .back {
+  transform: rotateY(180deg);
+}
+/* ホバー時のカード表面 */
+.card:hover .front {
+  transform: rotateY(0);
+}
+
 /* 好きなもの */
+.like hr{
+  margin-top: 0px;
+}
 .like p{
-  font-size: 12px;
+  font-size: 3vw;
   text-align: center;
 }
 /* カルーセル */

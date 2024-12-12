@@ -8,7 +8,7 @@
     font-style: normal;
   }
   html ,body,main{
-    height: 20px;
+    height:20px;
   }
   body{
     width: 100%;
@@ -68,9 +68,9 @@
     z-index: 10;
     height: 100%;
     width:0%;
-    background:whitesmoke;
+    background:rgb(119, 119, 119);
     text-align: center;
-    animation: titleback 6s ;
+    animation: titleback 7s ;
   }
   .statxt{
     margin-top: 15%;
@@ -84,7 +84,12 @@
     margin-right:16px;
     opacity: 0;
     animation: textanime 1s forwards;
-    
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "ROND" 0;
   }
   .statxt p:nth-child(1){
     color: red;
@@ -225,9 +230,18 @@
     transition: transform 0.5s;
     z-index: 2;
     overflow-y: scroll;
-    background-image: url(71885_0.jpg);
     background-attachment: fixed;
     background-position: center;
+  }
+  #mo1{
+    background-image: url(71885_0.jpg);
+  }
+  
+  #mo4{
+    background-image:url(tower.jpg);
+  }
+  #mo2{
+    background-image:url(オアシス夜景.jpg);
   }
 
 
@@ -237,7 +251,7 @@
     background-position:left;
     width: 40%;
     height: auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.1/1;
     padding: 20px;
     border-radius: 8px;
     position: absolute;
@@ -247,7 +261,7 @@
     margin: 0 auto;
     transition: transform 0.5s;
     z-index: 2;
-    background-size: contain;
+    background-size: cover;
     text-align: center;
     border: 2px solid purple;
   }
@@ -265,6 +279,7 @@
     backdrop-filter: blur(4px);
     border-radius: 4px;
     margin: 0 auto;
+    padding: 64px 24px;
   }
   #mo5 div{
     padding: 0;
@@ -401,6 +416,7 @@
     aspect-ratio: 1/1;
     background: black;
     margin: 0 auto;
+    
 
   }
   #mo2 > h3{
@@ -416,8 +432,8 @@
   .p-wark-text > p{
     font-weight: 900;
     color: rgb(0, 42, 255);
-    -webkit-text-stroke-color: #a915d2;
-    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: #cbc3cd;
+    -webkit-text-stroke-width: .3px;
   }
   .pw-logo{
     object-fit: cover;
@@ -487,6 +503,7 @@
   }
   .skill-p h3{
     display: inline;
+    font-size:32px;
   }
   .skill-p img{
     width: 80px;
