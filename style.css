@@ -37,6 +37,7 @@ header {
   height: 40px;
   z-index: 20;
 }
+
 h1{
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 1px;
@@ -169,7 +170,10 @@ header h1{
 /* メイン */
 .m-image{
   height: auto;
+  max-width: 100%;
   width: 100%;
+  overflow: hidden;
+  
 }
 .spbg{
   width: 100%;
