@@ -353,30 +353,66 @@
     border-radius: 2%;
 
     margin: 48px auto;
-    opacity: .5;
+    position: relative;
     transition: 1s;
+
+  }
+  .rere > h4{
+    position: absolute;
+    top: 20%;
+    z-index:3;
+    font-size: 56px;
+    transition: 1s;
+    -webkit-text-stroke-color: #ffffffc3;
+    -webkit-text-stroke-width: 2px;
+  }
+  .retleft{
+    left:24px;
+    transform: rotate(10deg);
+  }
+  .retright{
+    right:24px;
+    transform: rotate(-10deg);
+
   }
   .rere:hover{
-    opacity: 1;
+    > img{
+      opacity: 1;
+      transition: 1s;
+    }
+    > div{
+      opacity: 1;
+      transition: 1s;
+    }
+    > h4{
+      opacity: 0;
+      transition: 1s;
+    }
+
   }
   .rere > div{
-    width: 46%;
+    width: 26%;
     margin: 2%;
     height: auto;
     aspect-ratio: 1/1;
     background: rgb(16, 14, 14,.7);
     color: yellow;
-    
+    opacity: 0;
+    transition: 1s;
   }
   .rev{
     flex-direction: row;
   }
   .repic{
-    width: 46%;
+    width: 70%;
     margin: 2%;
     height: auto;
-    aspect-ratio: 1/1;
+    object-fit: cover;
+    aspect-ratio: 1.2/1;
     border-radius: 20%;
+    position: relative;
+    opacity: .5;
+    transition: 1s;
   }
   @keyframes sizeup{
     to{
