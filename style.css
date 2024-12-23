@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   background: linear-gradient(to right,rgb(31, 0, 34),rgb(8, 1, 102));
-  color: rgb(132, 121, 3);
+  color: rgb(156, 141, 189);
   font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 
@@ -208,7 +208,7 @@ header h1{
   margin:0;
   height: 400px;
   text-align: center;
-  background-image: url(自分1.jpg);
+  background-image: url(自分3.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

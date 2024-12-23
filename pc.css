@@ -7,15 +7,18 @@
     font-weight: 400;
     font-style: normal;
   }
-  html ,body,main{
-    height:20px;
+  .add{
+    display: none;
   }
+  /* html ,body,main{
+    height:20px;
+  } */
   body{
     width: 100%;
     background: linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150));
     /* animation:changecolor 3s infinite; */
-    
-    
+    height: 100vh;
+    overflow: hidden; 
   }
   .sp{
     display: none;
@@ -247,7 +250,7 @@
 
   /* 自己紹介 */
   #mo5{
-    background-image:url(mypic1.jpg) ;
+    background-image:url(自分3.jpg) ;
     background-position:left;
     width: 40%;
     height: auto;
@@ -267,23 +270,33 @@
   }
   #mo5 button{
     width: 40%;
-    margin: 0 auto;
+    margin: 0 auto 24px;
     font-size: 32px;
     height: 40px;
   } 
   .mo5txt{
     font-size: 16px;
-    color:rebeccapurple;
+    color:rgb(214, 174, 255);
     width: 65%;
     height: auto;
-    backdrop-filter: blur(4px);
     border-radius: 4px;
     margin: 0 auto;
-    padding: 64px 24px;
+    padding:16px 24px;
+    transition: 1s;
+    > p{
+      opacity: 0;
+    }
+  }
+  .mo5txt:hover{
+    transition: 1s;
+    backdrop-filter: blur(5px);
+    > p{
+      opacity: 1;
+      transition: 1.2s;
+    }
   }
   #mo5 div{
-    padding: 0;
-    margin: 0 auto;
+    margin: 16px auto;
   }
   /* 自己紹介ここまで */
   
