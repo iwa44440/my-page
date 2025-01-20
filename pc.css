@@ -17,8 +17,15 @@
     width: 100%;
     background: linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150));
     /* animation:changecolor 3s infinite; */
+    padding: 0;
+    margin: 0;
     height: 100vh;
-    overflow: hidden; 
+  }
+  main{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
   }
   .sp{
     display: none;
@@ -73,7 +80,7 @@
     width:0%;
     background:rgb(119, 119, 119);
     text-align: center;
-    animation: titleback 7s ;
+    /* animation: titleback 7s; */
   }
   .statxt{
     margin-top: 15%;
@@ -184,7 +191,7 @@
     aspect-ratio: 1/1;
   }
   .choice:hover{
-    animation:changecolor 3s infinite;
+    animation:changecolor 3s infinite linear;
 
   }
   @keyframes changecolor{
@@ -284,7 +291,7 @@
     padding:16px 24px;
     transition: 1s;
     > p{
-      opacity: 0;
+      opacity: .2;
     }
   }
   .mo5txt:hover{
@@ -475,14 +482,15 @@
   }
   .p-wark-text{
     backdrop-filter: blur(30px);
+    background: #18001f75;
     width: 50%;
     margin: auto;
   }
   .p-wark-text > p{
-    font-weight: 900;
-    color: rgb(0, 42, 255);
+    font-weight: 500;
+    color: rgb(134, 152, 242);
     -webkit-text-stroke-color: #cbc3cd;
-    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-width: .2px;
   }
   .pw-logo{
     object-fit: cover;
@@ -532,6 +540,7 @@
     opacity: 0.2;
     transition: 2s;
     backdrop-filter: blur(10px);
+    background-color: #000000a1;
 
 
   }
@@ -552,7 +561,8 @@
   }
   .skill-p h3{
     display: inline;
-    font-size:32px;
+    font-size:24px;
+    color: #ecd1f3;
   }
   .skill-p img{
     width: 80px;
@@ -564,6 +574,34 @@
   }
 
   footer,header{
-    height: 0%;
+    display: none;
+    overflow: hidden;
   }
+  
+  h3{
+    position: relative;
+  }
+  h3::before{
+    content: "";
+    position: absolute;
+    background: rgb(36, 19, 57);
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid rgb(98, 39, 169) ;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)rotate(45deg);
+    z-index: -1;
+    animation: kurukuru 10s linear infinite;
+    opacity: .7;
+  }
+  /* @keyframes kurukuru {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+
+  } */
 }

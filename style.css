@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   background: linear-gradient(to right,rgb(31, 0, 34),rgb(8, 1, 102));
-  color: rgb(156, 141, 189);
+  color: rgb(227, 214, 255);
   font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 
@@ -39,7 +39,7 @@ header {
 }
 
 h1{
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: #060606;
   -webkit-text-stroke-width: 1px;
   font-size: 6vw;
 }
@@ -47,6 +47,7 @@ h2{
   text-align: center;
   margin: 124px 0;
   font-size: 5vw;
+  position: relative;
 }
 h3{
   font-size: 4vw;
@@ -133,8 +134,8 @@ h3{
 
 .overlay span{
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 18px;
+  right: 6px;
   font-size: 32px;
   cursor: pointer;
 }
@@ -173,6 +174,11 @@ header h1{
   max-width: 100%;
   width: 100%;
   overflow: hidden;
+  /* z-index: -1;
+  > video{
+    position: fixed;
+    z-index: -5;
+  } */
   
 }
 .spbg{
@@ -185,15 +191,15 @@ header h1{
 }
 .message{
   position: absolute;
-  top: 50%;
-  font-size: 8vw;
+  top: 30%;
+  font-size: 7vw;
   transform: translate(-50%);
   left: 50%;
   font-weight: 900;
   color: #e2e61a;
   -webkit-text-stroke-color: #b31111;
   -webkit-text-stroke-width: .5px;
-  animation: poyooon 1.5s linear  infinite ;
+  animation: poyooon 2s linear  infinite ;
 }
 @keyframes poyooon {
   0%   { transform: translate(-50%, 0%); }
@@ -215,19 +221,28 @@ header h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+
 }
 .m-p-p{
   padding: 8px;
   font-size:32px;
   text-shadow: 1px 1px 0 aliceblue;
   background: linear-gradient(to right,rgb(31, 0, 34),rgb(8, 1, 102));
-
+}
+.m-p-w{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  color: #000;
+  font-weight: 500;
 }
 .hanten{
   transform: scaleY(-0.5);
 }
 .space{
-  height: 480px;
+  height: 240px;
 }
 
 /* 自己紹介 */
@@ -250,11 +265,14 @@ header h1{
 .card {
   width: 80%; /* 任意の横幅を指定 */
   height: auto;
-  aspect-ratio: 8/5;
+  aspect-ratio: 9.1/5.2;
   position: relative;
   cursor: pointer;
-  margin:88px auto;
+  margin:120px auto;
   overflow: hidden;
+  transform: rotate(5deg);
+  background: linear-gradient(to left,rgb(31, 0, 34),rgb(8, 1, 102));
+  box-shadow: 0px 0px 20px 20px black;
 }
 /* 擬似要素とpadding-topでカードの高さを指定 */
 .card::before {
@@ -264,15 +282,15 @@ header h1{
 }
 /* カード内の画像 */
 .card img {
-  width: 100%;
+  width: 90%;
 }
 /* カード裏面・表面の共通スタイル */
 .card .back,
 .card .front {
   transition: all 1s;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 5%;
+  top: 5%;
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
@@ -504,6 +522,10 @@ a{
   background:blue;
   max-width: 60%;
 }
+.sl8{
+  background:blue;
+  max-width: 80%;
+}
 
 /* 上に */
 header.scrolled {
@@ -541,7 +563,6 @@ header.scrolled {
 footer{
   margin: 80px auto 0;
   color: #fff;
-  
 }
 
 .contact{
@@ -558,6 +579,7 @@ border-radius: 50% / 100% 100% 0 0;
 transition: 2s;
 padding-bottom: 64px;
 border: #001572 double 1px ;
+
 }
 footer > section:hover{
   opacity: .7;
@@ -594,6 +616,74 @@ footer > section:hover{
   font-size: 16px;
 }
 
+@media(max-width:450px){
+  .css-carousel-slider4 img{
+    width: 80%;
+    opacity: 1;
+    transition: 1s;
+  
+  }
+  footer > section{
+    opacity: .7;
+    transition: 1s;
+     aspect-ratio: 1/.6;
 
+  }
+  .skill,.wark{
+    opacity: 1;
+    transition: 2s;
+  
+  }
+  h2,h3{
+    font-size: 16px;
+  }
+  p,.prof-com p{
+    font-size: 16px;
+  }
+
+}
+@media(max-width:900px){
+  h2::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 0 150px 90px;
+    border-color: transparent transparent 
+    rgb(36, 19, 57) 
+    transparent;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(45deg);
+    top: -90px;
+    left: 45%;
+    color: #fff;
+    opacity: .5;
+  
+  }
+  .warks > h3{
+    position: relative;
+    font-size: 16px;
+    padding: 40px;
+    margin:  0;
+  }
+  .warks > h3::before{
+    content: "";
+    position: absolute;
+    background: rgb(36, 19, 57);
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid rgb(98, 39, 169) ;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)rotate(45deg);
+    z-index: -1;
+    opacity: .3;
+  }
+}
 
 /* パソコン */

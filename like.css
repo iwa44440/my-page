@@ -1,1 +1,124 @@
 @charset "utf-8";
+body{
+  max-width: 100%;
+  background-color: aquamarine;
+  margin: 0;
+}
+main{
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 600px;
+  background-color: black;
+}
+header{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(86, 3, 159, 0.729);
+  opacity: 0.7;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  z-index: 20;
+}
+
+.text{
+  margin-top: 2000px;
+}
+
+
+/* img buttun */
+.imgcontainer .imgbox{
+  max-width: 800px;
+  height: 70vh;
+  min-height: 300px;
+  position: relative;
+  border: #333 5px double;
+}
+.imgcontainer .imgbox img{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: .4s;
+}
+.imgcontainer ul{
+    border: #333 5px double;
+    height: 120px;
+    max-width: 800px;
+    padding: 8px;
+    margin-top: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    overflow-x: scroll;
+    width: auto;
+}
+/* .foodcontainer ul::-webkit-scrollbar{
+  display: none;
+} */
+.imgcontainer li{
+    display: block;
+    max-width: 100px;
+    min-width: 100px;
+    height: auto;
+    aspect-ratio: 1/1;
+    list-style-type:none;
+    margin-right: 8px;
+}
+.imgcontainer li:last-child{
+  margin-right: 0;
+}
+.imgcontainer li label{
+    display:block;
+}
+.imgcontainer li img{
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+
+}
+/*ラジオボタンを非表示にする*/
+#food1,#food2,#food3,#food4,#food5{
+  display: none;
+}
+#food1:checked ~ .imgbox img:nth-child(1){
+ opacity: 1;
+}
+#food2:checked ~ .imgbox img:nth-child(2){
+ opacity: 1;
+}
+#food3:checked ~ .imgbox img:nth-child(3){
+ opacity: 1;
+}
+#food4:checked ~ .imgbox img:nth-child(4){
+  opacity: 1;
+ }
+ #food5:checked ~ .imgbox img:nth-child(5){
+  opacity: 1;
+ }
+ 
+
+
+/* 上に */
+header.scrolled {
+  background:rgb(7, 93, 133);
+}
+#to_top {
+  position: fixed;
+  bottom:16px;
+  right: 16px;
+  opacity: 0;
+}
+#to_top i {
+  font-size: 32px;
+  color: rgb(7, 93, 133);
+}
+#to_top.scrolled {
+  opacity: .7;
+}
