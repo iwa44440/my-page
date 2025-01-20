@@ -5,8 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yohの押し入れ</title>
   <link rel="stylesheet" href="like.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  
+  <header>
+    
+  </header>
+  <div id="target-2"></div>
+  <main>
+    <section>
+      <div class="imgcontainer">
+      <!--ラジオボタンは先頭に-->
+      <input type="radio" name="food" id="food1" checked>
+      <input type="radio" name="food" id="food2">
+      <input type="radio" name="food" id="food3">
+      <input type="radio" name="food" id="food4">
+      <input type="radio" name="food" id="food5">
+      <!--大きく表示する画像重ね合わせやすいように-->
+      <div class="imgbox">
+        <img src="71880_0.jpg" alt="seafood">
+        <img src="71882_0.jpg" alt="seafood">
+        <img src="71885_0.jpg" alt="seafood">
+        <img src="71882_0.jpg" alt="seafood">
+        <img src="71885_0.jpg" alt="seafood">
+      </div>
+      <!--サムネイル画像はリスト形式に-->
+      <ul>
+        <li><label for="food1"><img src="71880_0.jpg" alt="seafoodthumbnail"></label></li>
+        <li><label for="food2"><img  src="71882_0.jpg"alt="seafoodthumbnail"></label></li>
+        <li><label for="food3"><img src="71885_0.jpg" alt="seafoodthumbnail"></label></li>
+        <li><label for="food4"><img  src="71882_0.jpg"alt="seafoodthumbnail"></label></li>
+        <li><label for="food5"><img src="71885_0.jpg" alt="seafoodthumbnail"></label></li>
+      </ul>
+      </div>
+    </section>
+    <div class="text"></div>
+  </main>
+  <footer></footer>
+  <a href="#" id="to_top"><i class="bi bi-arrow-up-circle-fill"></i></a>
+  <script src="like.js"></script>
 </body>
 </html>

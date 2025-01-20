@@ -14,6 +14,7 @@
     open.classList.remove('hide');
   });
 }
+
 {
   function scrollCallback(entries){
     entries.forEach(entry => {
@@ -38,6 +39,7 @@
   const scrollObserver = new IntersectionObserver(scrollCallback);
   scrollObserver.observe(document.getElementById('target-2'));
 }
+
 {
   function callback(entries, obs){
     entries.forEach(entry => {
