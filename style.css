@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   background: linear-gradient(to right,rgb(31, 0, 34),rgb(8, 1, 102));
-  color: rgb(227, 214, 255);
+  color: rgb(253, 249, 200);
   font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 
@@ -29,34 +29,33 @@ hr{
 /* header */
 header {
   display: flex;
-  padding: 0 16px;
   background-color: rgba(86, 3, 159, 0.729);
   opacity: 0.7;
   position: fixed;
   width: 100%;
-  height: 40px;
+  height: 30px;
   z-index: 20;
 }
 
 h1{
   -webkit-text-stroke-color: #060606;
   -webkit-text-stroke-width: 1px;
-  font-size: 6vw;
+  font-size: 48px;
 }
 h2{
   text-align: center;
-  margin: 124px 0;
-  font-size: 5vw;
+  margin: 124px auto;
+  font-size: 32px;
   position: relative;
 }
 h3{
-  font-size: 4vw;
+  font-size: 16px;
 }
 
 /* 動き */
 .animate {
   opacity: 0;
-  transition: opacity 1s,transform .5s;
+  transition: opacity 1s,transform 1s;
 }
 
 .animate.appear{
@@ -139,16 +138,17 @@ h3{
   font-size: 32px;
   cursor: pointer;
 }
+.material-icons{
+  color: #000;
+}
 
 
 header h1{
   margin: 0;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   color: rgb(8, 30, 48);
-  opacity: 1;
-  padding-top:2px;
-  
+  opacity: 1;  
 }
 .text a {
   color: #000;
@@ -255,10 +255,18 @@ header h1{
 .Intro{
   text-align: center;
 }
-.prof-com p{
-  font-size: 3vw;
+.prof-com p,div{
   text-align: center;
 }
+.intr-b{
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+
+
+
+
+
 
 /* 名刺本体 */
 
@@ -412,7 +420,7 @@ a{
   height: auto;
   aspect-ratio: 1/1;
   margin:48px auto;
-  opacity: 0.3;
+  opacity: 0.7;
   transition: 2s;
 
 }
@@ -448,7 +456,7 @@ a{
   padding: 8px 4px;
   border-radius:4px;
   border: ridge 4px rgb(37, 3, 172);
-  opacity: 0.2;
+  opacity: 0.7;
   transition: 2s;
 }
 
@@ -561,36 +569,43 @@ header.scrolled {
 }
 
 footer{
+  height: 500px;
   margin: 80px auto 0;
   color: #fff;
+  background-image: url(自分2.jpg);
+background-size: cover;
+background-position: center;
 }
 
 .contact{
   text-align: center;
 }
 footer > section{
-margin-top: 120px;
-background: darkmagenta;
-height: 50%;
-width: 100%;
-aspect-ratio: 1/.5;
-opacity: 0.2;
-border-radius: 50% / 100% 100% 0 0;
+margin: 10% 5%;
+background: rgba(139, 0, 139, 0.736);
+
+height: 80%;
+width: 90%;
+/* aspect-ratio: 1/1; */
+opacity: .8;
+border-radius:8px;
 transition: 2s;
-padding-bottom: 64px;
 border: #001572 double 1px ;
 
 }
 footer > section:hover{
-  opacity: .7;
+  opacity: 1;
   transition: 1s;
 }
+.contact > h2{
+  margin: 32px auto;
+}
 .contact > div{
-  font-size: 32px;
+  font-size: 24px;
   > a{
     font-size: 24px;
     font-weight: 900;
-    color: #bb00ff;
+    color: #fcf6fe;
     -webkit-text-stroke-color: #56a5ff;
     -webkit-text-stroke-width:1px;
   }
@@ -601,7 +616,7 @@ footer > section:hover{
 }
 .con-h:hover{
   margin: auto;
-  background-color: #663399;
+  background-color: #66339946;
   border-radius: 8px;
   width: 40%;
   transform-origin: left top;
@@ -635,9 +650,12 @@ footer > section:hover{
   
   }
   h2,h3{
-    font-size: 16px;
+    font-size: 24px;
   }
   p,.prof-com p{
+    font-size: 16px;
+  }
+  .contact > div{
     font-size: 16px;
   }
 
@@ -663,7 +681,7 @@ footer > section:hover{
   }
   .warks > h3{
     position: relative;
-    font-size: 16px;
+    font-size: 24px;
     padding: 40px;
     margin:  0;
   }
