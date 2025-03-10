@@ -52,7 +52,7 @@
     });
   }
   const option ={
-    threshold:0.2,
+    threshold:.9,
   };
   const observer = new IntersectionObserver(callback, option);
   const targets = document.querySelectorAll(".animate");

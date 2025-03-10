@@ -16,7 +16,7 @@
   body{
     width: 100%;
     background: linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150));
-    /* animation:changecolor 3s infinite; */
+    animation:changecolor 3s infinite;
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -384,7 +384,10 @@
     font-size: 56px;
     transition: 1s;
     -webkit-text-stroke-color: #ffffffc3;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
+    font-weight: 500;
+    font-family: "Ephesis", cursive;
+
   }
   .retleft{
     left:24px;
@@ -416,7 +419,7 @@
     height: auto;
     aspect-ratio: 1/1;
     background: rgb(16, 14, 14,.7);
-    color: yellow;
+    color: rgb(255, 255, 165);
     opacity: 0;
     transition: 1s;
   }
@@ -503,7 +506,8 @@
     width: 100%;
     height: 64px;
     margin: 8px auto;
-    padding: 0;
+    padding: 0; 
+    
   }
   .con-p > a, .con-p > button{
     background: rgb(0, 0, 0,.7);
@@ -513,6 +517,12 @@
     font-size: 40px;
     display: block;
     transition: 1.5s;
+    > span{
+      font-size: 16px;
+      display: inline-block;
+      margin-left: 8px;
+      color: rgb(0, 187, 255);
+    }
 
   }
   .con-p > button:hover ,.con-p > a:hover{
