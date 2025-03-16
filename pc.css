@@ -195,23 +195,22 @@
 
   }
   @keyframes changecolor{
-    0%{background-color: rgba(65, 237, 243, 0.305);}
-    25%{background-color: rgba(47, 207, 154, 0.301);}
-    50%{background-color: rgba(0, 211, 141, 0.305);}
-    75%{background-color: rgba(194, 207, 203, 0.308);}
-    100%{background-color: rgba(65, 237, 243, 0.301);}
+    0%{background-color: rgba(0, 247, 255, 0.1);}
+    25%{background-color: rgba(47, 207, 154, 0.1);}
+    50%{background-color: rgba(0, 211, 141, 0.1);}
+    75%{background-color: rgba(194, 207, 203, 0.1);}
+    100%{background-color: rgba(0, 247, 255, 0.1);}
   }
 
   /* クリックで開く */
-  #op1,#op2,#op3,#op4,#op5{
+  #op1,#op2,#op3,#op4{
     cursor: cell;
-
   }
-  #op5 img{
+  #op1 img{
     transition: 1s;
 
   }
-  #op5 img:hover{
+  #op1 img:hover{
     filter: grayscale(100%);
     opacity: .5;
     transition: 1s;
@@ -255,8 +254,9 @@
 
 
   /* 自己紹介 */
-  #mo5{
+  #mo1{
     background-image:url(自分3.jpg) ;
+    background-size: cover;
     background-position:left;
     width: 40%;
     height: auto;
@@ -274,13 +274,13 @@
     text-align: center;
     border: 2px solid purple;
   }
-  #mo5 button{
+  #mo1 button{
     width: 40%;
     margin: 0 auto 24px;
     font-size: 32px;
     height: 40px;
   } 
-  .mo5txt{
+  .mo1txt{
     font-size: 16px;
     color:rgb(214, 174, 255);
     width: 65%;
@@ -293,7 +293,7 @@
       opacity: .2;
     }
   }
-  .mo5txt:hover{
+  .mo1txt:hover{
     transition: 1s;
     backdrop-filter: blur(5px);
     > p{
@@ -301,7 +301,7 @@
       transition: 1.2s;
     }
   }
-  #mo5 div{
+  #mo1 div{
     margin: 16px auto;
   }
   /* 自己紹介ここまで */
@@ -333,7 +333,7 @@
     display: none;
   }
   
-  #mo1.hidden,#mo2.hidden,#mo3.hidden,#mo4.hidden,#mo5.hidden {
+  #mo1.hidden,#mo2.hidden,#mo3.hidden,#mo4.hidden{
     transform: translate(0, -10000px);
   }
   .mo-cl{
@@ -363,103 +363,8 @@
   .pw-site{
     overflow-y: scroll;
   }
-  /* Likes */
-  .rere{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    backdrop-filter: blur(10px);
-    border-radius: 2%;
+  
 
-    margin: 48px auto;
-    position: relative;
-    transition: 1s;
-
-  }
-  .rere > h4{
-    position: absolute;
-    top: 20%;
-    z-index:3;
-    font-size: 56px;
-    transition: 1s;
-    -webkit-text-stroke-color: #ffffffc3;
-    -webkit-text-stroke-width: 1px;
-    font-weight: 500;
-    font-family: "Ephesis", cursive;
-
-  }
-  .retleft{
-    left:24px;
-    transform: rotate(10deg);
-  }
-  .retright{
-    right:24px;
-    transform: rotate(-10deg);
-
-  }
-  .rere:hover{
-    > img{
-      opacity: 1;
-      transition: 1s;
-    }
-    > div{
-      opacity: 1;
-      transition: 1s;
-    }
-    > h4{
-      opacity: 0;
-      transition: 1s;
-    }
-
-  }
-  .rere > div{
-    width: 26%;
-    margin: 2%;
-    height: auto;
-    aspect-ratio: 1/1;
-    background: rgb(16, 14, 14,.7);
-    color: rgb(255, 255, 165);
-    opacity: 0;
-    transition: 1s;
-  }
-  .rev{
-    flex-direction: row;
-  }
-  .repic{
-    width: 70%;
-    margin: 2%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 1.2/1;
-    border-radius: 20%;
-    position: relative;
-    opacity: .5;
-    transition: 1s;
-  }
-  @keyframes sizeup{
-    to{
-      transform: scale(1.5);
-    }
-  }
-  /* .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(var(--r) * 2px);
-    height: calc(var(--r) * 2px);
-    border: 20px solid #ddd;
-    border-radius: 50%;
-    box-sizing: border-box;
-    > div {
-      --a2: calc(var(--a) * 1deg - 90deg);
-      --x: calc(cos(var(--a2)) * var(--r) * 1px);
-      --y: calc(sin(var(--a2)) * var(--r) * 1px);
-      position: absolute;
-      color: #555;
-      font: 700 50px / 1 Impact;
-      translate: var(--x) var(--y);
-    }
-  } */
 
   /* パフォーマンス　設定 */
   /* #mo2{
