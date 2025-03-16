@@ -80,7 +80,7 @@
     width:0%;
     background:rgb(119, 119, 119);
     text-align: center;
-    /* animation: titleback 7s; */
+    animation: titleback 7s;
   }
   .statxt{
     margin-top: 15%;
@@ -200,7 +200,6 @@
     50%{background-color: rgba(0, 211, 141, 0.305);}
     75%{background-color: rgba(194, 207, 203, 0.308);}
     100%{background-color: rgba(65, 237, 243, 0.301);}
-
   }
 
   /* クリックで開く */
