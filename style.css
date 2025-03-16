@@ -235,9 +235,17 @@ text-align: right;
   font-size: 24px;
   letter-spacing: 4px;
 }
-
-
-
+.prof-com > div{
+  margin-top: 80px;
+}
+.prof-com > .pr-last{
+  margin-bottom: 124px;
+}
+.prof-com > div > h1{
+  font-size: 32px;
+  -webkit-text-stroke-color: #969696;
+  -webkit-text-stroke-width: .5px;
+}
 
 
 
@@ -556,7 +564,7 @@ footer > section:hover{
     border-style: solid;
     border-width: 0px 0 150px 90px;
     border-color: transparent transparent 
-    rgb(36, 19, 57) 
+    rgb(75, 31, 128) 
     transparent;
     position: absolute;
     z-index: -1;
@@ -564,8 +572,10 @@ footer > section:hover{
     top: -90px;
     left: 45%;
     color: #fff;
-    opacity: .5;
-  
+    opacity: .5; 
+  }
+  .Intro > h2::before{
+    top: -60px;
   }
   .warks > h3{
     position: relative;
