@@ -15,8 +15,9 @@
   } */
   body{
     width: 100%;
-    background: linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150));
-    animation:changecolor 3s infinite;
+    /* background: linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150)); */
+    background: #cbc3cd;
+    animation:changecolor 20s infinite;
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -33,16 +34,7 @@
   header{
     background: none;
   }
-  .title{
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: "Ephesis", cursive;
-    font-weight: 400;
-    font-style: normal;
-    
-  }
+
   .pc h1{
     -webkit-text-stroke-color: #2b4cadc3;
     -webkit-text-stroke-width: .01px;
@@ -58,16 +50,82 @@
     min-width: 100%;
     max-height: 100%;
   }
-  h1{
+  .title{
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Ephesis", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+
+  .title > h1{
     margin: 0;
     padding: 0;
     font-size: 64px;
+    position: relative;
   }
-  .title img{
-    z-index: -2;
-    width: 200px;
-    border: darkmagenta double 4px;
+  .main-txt{
+    line-height: 1.2;
+    position: absolute;
+    top:5%;
+    left: 2%;
+    color: #faf9f9;
+    -webkit-text-stroke-color: #000000af;
+    -webkit-text-stroke-width: 1px;
+    font-size: 40px;
+    > div{
+      text-align: left;
+      font-weight: 700px;
+    }
+    >h2{
+      text-align: left;
+      margin: 18px 0;
+      padding:0;
+      font-size: 72px;
+      color: #faf9f964;
+    backdrop-filter: blur(1px);
+    -webkit-text-stroke-color: #000000af;
+    -webkit-text-stroke-width: 2px;
+    border-bottom: #000000 double 4px;
+    }
   }
+  .m-txt1{
+    margin: 0 auto;
+    font-size: 56px;
+    font-weight: 800;
+    color: #ffffff00;
+    -webkit-text-stroke-color: #002f37af;
+    -webkit-text-stroke-width: 1.5px;
+    letter-spacing: .2em;
+    line-height: 1.05;
+    > .span0{
+      font-size: 72px;
+      text-shadow: 1px 1px 0 #72eaffaf, 2px 2px 0 #002f37af, 3px 3px 0 #002f37af;
+    }
+    > .span1{
+      color: #000000;
+      font-size: 48px;
+      margin-left: 10%;
+    }
+    > .span2{
+      font-size: 64px;
+      background: linear-gradient(to right,rgb(38, 41, 228),#00d5dc,rgb(172, 152, 2));
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+    }
+  }
+  .main-txt > div:last-child{
+    font-size: 16px;
+    > span{
+      font-size: 24px;
+    }
+  }
+
+
   /* start */
   .start{
     text-align: center;
@@ -145,24 +203,30 @@
 
   /* 選択 */
   .choice{
-    /* background-color: rgb(88, 74, 165); */
+    background-color: rgba(88, 74, 165, 0.363);
     backdrop-filter: blur(3px);
-    border-radius: 50%;
-    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.062);
+    /* border-radius: 50%; */
+    box-shadow: 0px 0px 15px 0px rgb(255, 255, 255);
+    border-radius: 5vh;
     position: absolute;
     transition: 1.5s;
+    text-align: center;
   }
   .choice h2{
-    margin-top: 40%;
-    font-size: 48px;
-    color: rgb(245, 243, 243);
-    -webkit-text-stroke-color: #d94eff;
+    /* margin-top: 40%; */
+    margin: calc((20vh - 24px) / 2) auto;
+    font-size: 24px;
+    /* color: rgb(245, 243, 243);
+    -webkit-text-stroke-color: #7c009f;
+    -webkit-text-stroke-width: .5px; */
+    color: rgb(31, 31, 31);
+    -webkit-text-stroke-color: #7c009f;
     -webkit-text-stroke-width: .5px;
     font-family: "Ephesis", cursive;
     font-weight: 200;
     font-style: normal;
   }
-  .c1{
+  /* .c1{
     top: 5%;
     left: 5%;
     height: 250px;
@@ -189,7 +253,37 @@
     height: 250px;
     width: 250px;
     aspect-ratio: 1/1;
-  }
+  } */
+ .c1{
+  top:2.5%;
+  right:2%;
+  height:20vh;
+  width:auto;
+  aspect-ratio: 1/1;
+ }
+ .c2{
+  top:27.5%;
+  right:2%;
+  height:20vh;
+  width:auto;
+  aspect-ratio: 1/1;
+ }
+ .c3{
+  top:52.5%;
+  right:2%;
+  height:20vh;
+  width:auto;
+  aspect-ratio: 1/1;
+
+ }
+ .c4{
+  top:77.5%;
+  right:2%;
+  height:20vh;
+  width:auto;
+  aspect-ratio: 1/1;
+ }
+
   .choice:hover{
     animation:changecolor 3s infinite linear;
 

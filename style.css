@@ -86,6 +86,7 @@ h3{
 
 .spa1{
   position: relative;
+  margin-top: 60px;
   padding-top: 70px;
 }
 .spa1::before {
@@ -153,7 +154,7 @@ h3{
 }
 
 @keyframes parallax{
-  from{background-position: center 0;}
+  from{background-position: center 20px;}
   to{background-position: center -100px;}
 }
 
@@ -181,26 +182,76 @@ h3{
 
 /* 好きなもの */
 .like{
-  height: auto;
-  margin: 30vh auto;
+  height: 500px;
+  margin: 200px auto;
   position: relative;
 }
 .like > div{
-  margin: 60px auto;
+  position: absolute;
+  width: 40%;
   height: calc(1080px / 6);
-  text-align: left;
   > img{
-    width: 100%;
-    width: 40%;
+    width: 90%;
     padding: 10px 5%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
     animation: fadeIn linear both;
    animation-timeline: view();
    animation-range: entry 25% cover 50%;
   }
 }
-
+.like-txt{
+  top: 10%;
+  left: 50%;
+  > p{
+    font-size: 16px;
+  }
+  > h3{
+    font-size: 20px;
+  }
+  z-index: 3;
+  animation: fadeIn linear both;
+   animation-timeline: view();
+   animation-range: entry 10% cover 40%;
+}
+.like-txt2{
+  top: 45%;
+  right: 50%;
+  > p{
+    font-size: 16px;
+  }
+  > h3{
+    font-size: 20px;
+  }
+  z-index: 3;
+  animation: fadeIn linear both;
+   animation-timeline: view();
+   animation-range: entry 10% cover 30%;
+}
+.like-b-1{
+  bottom: 0;
+  left: 15%;
+}
+.like-b-2{
+  top: -25%;
+  left: 10%;
+}
+.like-b-3{
+  top: -30%;
+  right: 5%;
+}
+.like-b-4{
+  bottom: 20%;
+  left:60%;
+}
+.like-b-5{
+  top: 10%;
+  left: 5%;
+}
+.like-b-6{
+  bottom:-15%;
+  left: 55%;
+}
 
 @keyframes fadeIn {
 from {
@@ -213,9 +264,7 @@ to {
   clip-path: inset(0% 0% 0% 0%);
 }
 }
-.like > .b-right{
-text-align: right;
-}
+
 
 
 /* 自己紹介 */
@@ -528,12 +577,6 @@ footer > section:hover{
 }
 
 @media(max-width:450px){
-  .css-carousel-slider4 img{
-    width: 80%;
-    opacity: 1;
-    transition: 1s;
-  
-  }
   footer > section{
     opacity: .7;
     transition: 1s;
