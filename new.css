@@ -316,10 +316,21 @@ header h1{
 /* 外側 */
 .main-animation > .out{
   border-radius: 50%;
-  background-color: #0d244e84;
-  
+  background-color: #0d244e84;  
 }
-
+.out{
+  box-shadow:
+      -1px -1px #fdf,
+       1px -1px #fdf,
+       1px  1px #fdf,
+      -1px  1px #fdf,
+      0 0 .1em #fdf,
+      0 0 .1em #fdf inset,
+      0 0 .5em #fdf,
+      0 0 .5em #fdf inset,
+      0 0 1em #fdf,
+      0 0 1em #fdf inset;
+}
 .m-b-top{
   transform:
       rotateX(90deg)
@@ -607,14 +618,24 @@ header h1{
       translateZ(30px);
 }
 /* 外側 */
-.main-animation > .out{
+/* .main-animation > .out{
   border-radius: 50%;
-  background-color: #0d244e84;
+  background-color: #ac98e73e;
   height: 50%;
   width: 50%;
-  
-}
+    box-shadow:
+        -1px -1px #7e45e270,
+         1px -1px #7e45e270,
+         1px  1px #7e45e26f,
+        -1px  1px #7e45e270,
+        0 0 .1em #fdf,
+        0 0 .1em #fdf inset,
+        0 0 .5em #fdf,
+        0 0 .5em #7e45e271 inset,
+        0 0 1em #fdf,
+        0 0 1em #fdf inset;
 
+}
 .m-b-top{
   transform:
       rotateX(90deg)
@@ -640,8 +661,6 @@ header h1{
       rotateX(150deg)
       translateZ(300px);
 }
-
-
 .m-b-bottom {
   transform:
       rotateX(-90deg)
@@ -667,12 +686,10 @@ header h1{
       rotateX(-150deg)
       translateZ(300px);
 }
-
 .m-b-front {
  transform: translateZ(300px);
  
 }
-
 .m-b-back {
   transform:
       rotateY(180deg)
@@ -698,7 +715,6 @@ header h1{
       rotateY(240deg)
       translateZ(300px);
 }
-
 .m-b-right {
   transform:
       rotateY(90deg)
@@ -752,7 +768,6 @@ header h1{
   rotateY(90deg)
   translateZ(300px);
 }
-
 .m-b-left {
  transform:
       rotateY(-90deg)
@@ -780,7 +795,7 @@ header h1{
    rotateY(-90deg)
    translateZ(300px)
    ;
- }
+ } */
 
 
 
@@ -821,22 +836,22 @@ header h1{
 }
 
 .orbit1 {
-  width: 330px;
-  height: 330px;
+  width: 420px;
+  height: 420px;
   border: 1px solid #2e006da5;
   animation: spin3D 5s linear .2s infinite;
 }
 
 .orbit2 {
-  width: 240px;
-  height: 240px;
+  width: 315px;
+  height: 315px;
   border: 1px solid #044252a5;
   animation: spin3D 4s linear 0s infinite;
 }
 
 .orbit3 {
-  width: 180px;
-  height: 180px;
+  width: 210px;
+  height: 210px;
   border: 1px solid #740000a5;
   animation: spin3D 3s linear 0s infinite;
 }
