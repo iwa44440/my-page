@@ -15,9 +15,13 @@
   } */
   body{
     width: 100%;
-    /* background: linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150)); */
-    background: #cbc3cd;
+    background:url(水彩風.jpg);
+    /* background: 
+    linear-gradient(to right,rgb(38, 190, 228),#ebd0d0,rgb(20, 10, 150)); */
+    background-size: cover;
+    background-blend-mode:overlay;
     animation:changecolor 20s infinite;
+
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -80,7 +84,7 @@
       text-align: left;
       font-weight: 700px;
     }
-    >h2{
+    /* >h2{
       text-align: left;
       margin: 18px 0;
       padding:0;
@@ -90,8 +94,49 @@
     -webkit-text-stroke-color: #000000af;
     -webkit-text-stroke-width: 2px;
     border-bottom: #000000 double 4px;
-    }
+    } */
   }
+.main-txt > h2{
+     text-align: left;
+      margin: 18px 0;
+      padding:0;
+      font-size: 72px;
+      color: #000000;
+    backdrop-filter: blur(1px);
+    -webkit-text-stroke-color: #00000000;
+    -webkit-text-stroke-width: 2px;
+    border-bottom: #000000 double 4px;
+    overflow: hidden;
+    color: transparent;
+    text-shadow: 0 -1.5em 0 #00607a, 0 0 0 #0b127397;
+    transition: text-shadow .2s;
+  }
+  .main-txt > h2 >span:nth-child(1){
+    transition: text-shadow .3s;
+  }
+  .main-txt > h2 >span:nth-child(2){
+    transition: text-shadow .45s;
+  }
+  .main-txt > h2 >span:nth-child(3){
+    transition: text-shadow .6s;
+  }
+  .main-txt > h2 >span:nth-child(4){
+    transition: text-shadow .8s;
+  }
+  .main-txt > h2 >span:nth-child(5){
+    transition: text-shadow .8s;
+  }
+  .main-txt > h2 >span:nth-child(6){
+    transition: text-shadow .8s;
+  }
+  .main-txt > h2 >span:nth-child(7){
+    transition: text-shadow .8s;
+  }
+  .main-txt > h2:hover {
+    text-shadow: 0 0 0 #0081818e, 0 1.5em 0 #2aaaff59; /* 2つの影の位置を上方向に1.5emずつずらす */
+  }
+
+
   .m-txt1{
     margin: 0 auto;
     font-size: 56px;
@@ -203,10 +248,10 @@
 
   /* 選択 */
   .choice{
-    background-color: rgba(88, 74, 165, 0.363);
-    backdrop-filter: blur(3px);
+    /* background-color: rgba(88, 74, 165, 0.363);
+    backdrop-filter: blur(3px); */
     /* border-radius: 50%; */
-    box-shadow: 0px 0px 15px 0px rgb(255, 255, 255);
+    /* box-shadow: 0px 0px 15px 0px rgb(255, 255, 255); */
     border-radius: 5vh;
     position: absolute;
     transition: 1.5s;
@@ -214,8 +259,10 @@
   }
   .choice h2{
     /* margin-top: 40%; */
-    margin: calc((20vh - 24px) / 2) auto;
-    font-size: 24px;
+    margin: calc((10vh - 24px) / 2) auto;
+    width: 240px;
+    font-size: 48px;
+    border-bottom:#7c009f solid 2px ;
     /* color: rgb(245, 243, 243);
     -webkit-text-stroke-color: #7c009f;
     -webkit-text-stroke-width: .5px; */
@@ -225,6 +272,8 @@
     font-family: "Ephesis", cursive;
     font-weight: 200;
     font-style: normal;
+    transition: 1s;
+
   }
   /* .c1{
     top: 5%;
@@ -256,44 +305,57 @@
   } */
  .c1{
   top:2.5%;
-  right:2%;
-  height:20vh;
+  left:90%;
+  transform: translateX(-50%);
+  height:15vh;
   width:auto;
-  aspect-ratio: 1/1;
  }
  .c2{
   top:27.5%;
-  right:2%;
-  height:20vh;
+  left:90%;
+  transform: translateX(-50%);
+  height: 15vh;
   width:auto;
-  aspect-ratio: 1/1;
  }
  .c3{
   top:52.5%;
-  right:2%;
-  height:20vh;
+  left:90%;
+  transform: translateX(-50%);
+  height: 15vh;
   width:auto;
-  aspect-ratio: 1/1;
 
  }
  .c4{
   top:77.5%;
-  right:2%;
-  height:20vh;
+  left:90%;
+  transform: translateX(-50%);
+  height: 15vh;
   width:auto;
-  aspect-ratio: 1/1;
  }
-
-  .choice:hover{
-    animation:changecolor 3s infinite linear;
+.choice h2 span {
+  /* 初期値のinlineではtransformが効かないためinline-blockを指定 */
+  display: inline-block;
+  transition: transform .5s;
+}
+/* .choice:hover h2 span {
+  transform: perspective(600px) rotateY(-15deg) rotateX(20deg);
+} */
+  .choice>h2:hover{
+    letter-spacing: 0.07em;
+    animation:change-f-color 3s infinite linear;
+    transition: 1s;
+    border-bottom: #7d009f76 solid 3px;
+    > span{
+      transform: perspective(600px) rotateY(-15deg) rotateX(20deg);
+    }
 
   }
-  @keyframes changecolor{
-    0%{background-color: rgba(0, 247, 255, 0.1);}
-    25%{background-color: rgba(47, 207, 154, 0.1);}
-    50%{background-color: rgba(0, 211, 141, 0.1);}
-    75%{background-color: rgba(194, 207, 203, 0.1);}
-    100%{background-color: rgba(0, 247, 255, 0.1);}
+  @keyframes change-f-color{
+    0%{color: rgba(0, 247, 255, 0.1);}
+    25%{color: rgba(47, 207, 154, 0.1);}
+    50%{color: rgba(0, 211, 141, 0.1);}
+    75%{color: rgba(194, 207, 203, 0.1);}
+    100%{color: rgba(0, 247, 255, 0.1);}
   }
 
   /* クリックで開く */
@@ -423,7 +485,7 @@
   } 
   .mo1txt{
     font-size: 16px;
-    background-color: #027ca93d;
+    background-color: #40c8f93d;
     color:rgb(255, 255, 255);
     width: 65%;
     height: auto;
@@ -436,9 +498,9 @@
   }
   .mypolicy{
     font-size: 24px;
-    color: rgb(206, 105, 201);
-    border-bottom: rgb(206, 105, 201) double 1px;
-    font-weight: 500;
+    color: rgb(189, 251, 254);
+    border-bottom: rgb(189, 251, 254) double 1px;
+    font-weight: 900;
     letter-spacing: 2px;
   }
   .mo1txtbox{
